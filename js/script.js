@@ -42,13 +42,25 @@ window.onload = () => {
   rollBtn.addEventListener("click", function () {
     if (dices === 0) {
       if (error.classList.contains("hidden")) {
+        error.textContent = "Please choose dices quantity";
         error.classList.remove("hidden");
       }
       setTimeout(() => {
         error.classList.add("hidden");
       }, 1500);
       return;
+    } else if (dices > 10) {
+      if (error.classList.contains("hidden")) {
+        error.textContent = "Only less than 10 dices are allowed";
+        error.classList.remove("hidden");
+        dicesInputElement.value = null;
+      }
+      setTimeout(() => {
+        error.classList.add("hidden");
+      }, 1500);
+      return;
     }
+
     card.classList.toggle("is-flipped");
     this.setAttribute("disabled", true);
     createDices();
