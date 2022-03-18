@@ -23,6 +23,11 @@ window.onload = () => {
     "fa-dice-18.jpg",
     "fa-dice-19.jpg",
     "fa-dice-20.jpg",
+    "fa-dice-21.jpg",
+    "fa-dice-22.jpg",
+    "fa-dice-23.jpg",
+    "fa-dice-24.jpg",
+    "fa-dice-25.jpg",
   ];
 
   let selectedDiceImages = [
